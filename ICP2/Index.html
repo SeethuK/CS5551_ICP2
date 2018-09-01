@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather Report</title>
+    <h1>Weather Report</h1>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="Response.js"></script>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+ <div ng-app="weather" ng-controller="weatherctrl">
+     <span class = 'weatherstyle'> StateCode:</span> <input type="text"  ng-model="code" required/>
+     <span class = 'weatherstyle'> City:</span> <input type="text"  ng-model="city" required/><br> <br>
+     <span class = 'weatherstyle'></span> <button id="btn" ng-click="getWeather() "> Show Weather </button>
+     <br/>
+     <br/>
+     <div style = 'margin-left: 10px'>
+         {{current_temp}} {{current_Weather}}
+         <img src = "{{current_weather_icon}}"/>
+     </div>
+     <div style = 'margin-left: 10px' ng-repeat="t in [0,1,2,3,4]" >
+
+             <div ng-show="siri">Weather at {{x[t].FCTTIME.civil}} is : {{x[t].temp.english}} F {{x[t].condition}}
+                 <img src= "{{x[t].icon_url}}"/>  </div>
+         </div>
+ </div>
+</body>
+</html>
