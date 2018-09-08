@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutritionix</title>
+    <h1>Nutritionix</h1>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="food.js"></script>
+    <link rel="stylesheet" href="nutrition.css">
+
+    <!--<link rel="stylesheet" href="weather.css">-->
+</head>
+<body>
+<div ng-app="nutrical" ng-controller="nutrictrl">
+    <span class = 'nutristyle'> Search Food:</span> <input type="text"  ng-model="searchfood" required/>
+    <span class = 'nutristyle'></span> <button id="btn" ng-click="getdetails() "> Show  </button>
+    <br/>
+    <br/>
+    <audio ng-src="{{url}}" controls autoplay></audio>
+    <div ng-repeat="n in [0,1,2]">
+    <div style = 'margin-left: 10px'>
+
+        <div id="siri" ng-show="a" ><b>for each serving of {{x[n].fields.nf_serving_weight_grams}} grams has {{x[n].fields.nf_calories}} calories and {{x[n].fields.nf_calories_from_fat}} calories from fat</b></div>
+
+    </div>
+
+
+
+</div>
+</div>
+</body>
+</html>
