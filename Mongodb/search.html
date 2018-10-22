@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-resource.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-sanitize.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="search.js"></script>
+
+    <style>
+        body,.contact-form {
+            background: darkslateblue;
+        }
+    </style>
+</head>
+
+<body>
+<p></p>
+<div ng-app="demo" ng-controller="Search">
+    <form class="contact_form"  ng-submit="search()" name="contact_form">
+        <input type="text" class="textbox1" name="major" placeholder="major" ng-model="major" required />
+        <input type="submit" name="Search" value="search"/>
+        <div id="result" ng-model="result">
+
+        </div>
+    </form>
+</div>
+</body>
+</html>

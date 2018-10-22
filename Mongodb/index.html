@@ -1,0 +1,68 @@
+<html ng-app="demoMongo" ng-controller="MongoRestController">
+<head >
+    <title>Mongo DB</title>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-resource.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-sanitize.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="index.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        .site-bg {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .site-bg-overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: rgba(92, 180, 142, 0.4);
+        }
+
+    </style>
+    <div style="color: white">
+        <h1 style="text-align: center" >MONGO DB</h1>
+    </div>
+    <style>
+        body,.contact-form {
+            background: darkslateblue;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class style="text-align: center">
+    <div class="contact-form">
+        <form class="contact_form" ng-submit="insertData()" name="contact_form">
+            <p></p>
+            <input type="text" class="textbox1" name="classid" placeholder="ClassID" ng-model="formData.ClassID" required /> <br><br>
+
+            <input type="text" class="textbox1" name="Sname" ng-model="formData.sname" placeholder="Student Name" required /><br><br>
+
+            <input type="text" class="textbox1" name="course" ng-model="formData.course" placeholder="course" required /><br><br>
+
+            <input type="text" name="major" class="textbox2" ng-model="formData.major" placeholder="major"><br><br>
+
+            <input type="text" name="minor" class="textbox2" ng-model="formData.minor" placeholder="minor"><br><br>
+
+            <input type="submit" name="CreateUser" value="Create User"/>
+        </form>
+        <div class="clear"></div>
+    </div>
+    <div class="footer">
+    </div>
+</div>
+</body>
+</html>
