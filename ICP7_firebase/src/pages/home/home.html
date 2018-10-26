@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <label class="item item-input"> <input type="file" (change)="fileChange($event)">
+    </label>
+    <img *ngIf="img1" [src]="img1" class="imgStyle"/>
+  </ion-item>
+  <button ion-button color="primary" (click)="display()">See images</button>
+  <ion-item>
+  </ion-item>
+  <button ion-button color="primary" (click)="signout()">Log Out</button>
+  <ion-item>
+    <div id ="dataContainer">
+
+    </div>
+
+  </ion-item>
+</ion-content>
