@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="know" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="know" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="know" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="know" class="no-js"> <!--<![endif]-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Home</title>
+    <style>
+        .r{
+            padding-top: 60px;
+            padding-left: 150px;
+            color: #5e5e5e;
+        }
+        .g{
+            padding-left: 200px;
+        }
+        .output{
+            padding-left: 150px;
+            padding-top: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+
+<script src="script.js"></script>
+<div ng-app="know" ng-controller="knowctrl">
+    <p class="r"><b>Search:</b><input type="text" ng-model="search" placeholder="Enter the name to search" required/></p>
+    <p class="g"> <button  id="btn" ng-click="getdetails() ">Get Details</button></p>
+    <div class="output" id="siri" ng-show="a" > Name: {{nam}}<br>
+        Description :{{x}}<br> URL : <a>{{y}}</a> </div>
+</div>
+</body>
+</html>
